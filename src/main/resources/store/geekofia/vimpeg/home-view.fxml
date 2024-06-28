@@ -33,7 +33,6 @@
 -->
 
 <?import javafx.geometry.Insets?>
-<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -44,104 +43,117 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="store.geekofia.vimpeg.controllers.HomeController"
->
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="store.geekofia.vimpeg.controllers.HomeController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="New"/>
-                        <MenuItem mnemonicParsing="false" text="Open…"/>
-                        <Menu mnemonicParsing="false" text="Open Recent"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Close"/>
-                        <MenuItem mnemonicParsing="false" text="Save"/>
-                        <MenuItem mnemonicParsing="false" text="Save As…"/>
-                        <MenuItem mnemonicParsing="false" text="Revert"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Preferences…"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Quit"/>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Undo"/>
-                        <MenuItem mnemonicParsing="false" text="Redo"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Cut"/>
-                        <MenuItem mnemonicParsing="false" text="Copy"/>
-                        <MenuItem mnemonicParsing="false" text="Paste"/>
-                        <MenuItem mnemonicParsing="false" text="Delete"/>
-                        <SeparatorMenuItem mnemonicParsing="false"/>
-                        <MenuItem mnemonicParsing="false" text="Select All"/>
-                        <MenuItem mnemonicParsing="false" text="Unselect All"/>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="About MyHelloApp"/>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
-        <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0"
-                   VBox.vgrow="ALWAYS">
+        <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <items>
                 <TabPane prefHeight="452.0" prefWidth="446.0" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                        <Tab text="Video">
+                        <Tab text="📽 Video">
                             <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                    <children>
-                                        <Button fx:id="videoFilePicker" alignment="CENTER" contentDisplay="CENTER"
-                                                mnemonicParsing="false"
-                                                onMouseClicked="#onVideoFilePickerClick"
-                                                text="Add Video File"
-                                                textAlignment="CENTER" AnchorPane.leftAnchor="50.0"
-                                                AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0"/>
-                                    </children>
+                           <children>
+                              <GridPane alignment="CENTER" prefHeight="424.0" prefWidth="446.0">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="218.20001220703125" minWidth="10.0" prefWidth="151.99999465942383" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.79998779296875" minWidth="10.0" prefWidth="143.20001220703125" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.79998779296875" minWidth="10.0" prefWidth="163.19998779296873" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                              <Button fx:id="videoFilePicker" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onVideoFilePickerClick" prefWidth="94.0" text="Add Video File" textAlignment="CENTER" />
+                                 </children>
+                              </GridPane>
+                           </children>
                                 </AnchorPane>
                             </content>
                         </Tab>
+                  <Tab text="📷 Image">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="🎵Audio">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
                     </tabs>
                 </TabPane>
                 <AnchorPane fx:id="mediaViewPane">
-                    <children>
-                        <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="400.0" layoutX="23.0" layoutY="26.0">
-                            <viewport>
-                                <Rectangle2D/>
-                            </viewport>
-                        </MediaView>
-                    </children>
+                    <MediaView fx:id="mediaView" />
                 </AnchorPane>
             </items>
         </SplitPane>
-        <AnchorPane prefHeight="100.0" prefWidth="900.0"/>
+        <AnchorPane prefHeight="100.0" prefWidth="900.0" />
         <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
             <children>
-                <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Online" HBox.hgrow="ALWAYS">
+                <Label fx:id="versionLabel" maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Online" HBox.hgrow="ALWAYS">
                     <font>
-                        <Font size="11.0" fx:id="x3"/>
+                        <Font size="11.0" fx:id="x3" />
                     </font>
                     <textFill>
-                        <Color red="0.625" green="0.625" blue="0.625" fx:id="x4"/>
+                        <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
                     </textFill>
                 </Label>
-                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS"/>
-                <Label font="$x3" maxWidth="-1.0" text="Processing..." textFill="$x4" HBox.hgrow="NEVER"/>
+                <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                <Label font="$x3" maxWidth="-1.0" text="Processing..." textFill="$x4" HBox.hgrow="NEVER" />
             </children>
             <padding>
-                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0"/>
+                <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
             </padding>
         </HBox>
     </children>
